@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    	
+    <meta charset="utf-8">
+    
+    <title>iParty - Admin Summary</title>
+ 	
+	<!--Bootstrap CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheets/bootstrap.css"/>
+    
+    <!--Caracteres OpenSans-->	
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'/>
+	
+	<link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.css"/>
+  
+	<!--Screen-->
+    <link rel="stylesheet" type="text/css" href="css/stylesheets/screen.css"/>
+    
+    <!--Responsive CSS-->
+    <link rel="stylesheet" type="text/css" href="css/stylesheets/responsive.css"/>
+
+</head>
+    
+<body>
+
+<div class="container-fluid">
+     <!--HEADER FIXADO NO TOPO-->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!--MENU PARA MOBILE-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">iParty</a>
+            </div>
+            <!--MENU DO USUARIO-->
+            <ul class="nav navbar-right top-nav">
+                <!--ALERTA DA AGENDA-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu alert-dropdown">
+                        <li>
+                            <a href="#">Alerta de Evento <span class="label label-default">Alert Badge</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <!--OPÇÕES DO USUARIO-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Bruno Lopes <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="perfil.html"><i class="fa fa-fw fa-user"></i> Perfil</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Menssagens</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> Opções</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Sair</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!--BARRA LATERAL ESQUERDA-->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                  
+                   <li>
+                       <a href="index.html">Resumo</a>
+                   </li>                   
+                   <li><a href="agenda.html"><i class="fa fa-calendar"></i> Agenda</a></li>
+                   <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-caret-square-o-down"></i> Eventos<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="cadevento.html">Novo</a>
+                            </li>
+                            <li>
+                                <a href="listevento.html">Eventos Cadastrados</a>
+                            </li>                               
+                            <li>
+                                <a href="#">Divulgação</a>
+                            </li>
+                            <li>
+                                <a href="#">Cardápio</a>
+                            </li>
+                            <li>
+                                <a href="#">Pessoas Confirmadas</a>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                    <li>
+                        <a href="sac.html"><i class="fa fa-phone"></i> SAC</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <!--CONTEUDO DA PAGINA-->
+    <div class="container-fluid conteudo-container">
+        <div class="row">
+           <!--Resumo-->
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>Editar Informações</h2>
+                        <form id="register-form" action="" method="get" role="form">
+                            <div class="form-group">
+                                <input type="text" name="username" id="cad_username" tabindex="1" class="form-control" placeholder="Usuario" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" id="cad_password" tabindex="2" class="form-control" placeholder="Senha">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password_confirm" id="password_confirm" tabindex="3" class="form-control" placeholder="Confirmar Senha">
+                            </div>
+                            <div class="form-group">
+                                <input type="name" name="first_name" id="first-name" tabindex="4" class="form-control" placeholder="Primeiro Nome" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="name" name="last_name" id="last-name" tabindex="5" class="form-control" placeholder="Sobrenome" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" tabindex="6" class="form-control" placeholder="Email" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="name" name="fantasy_name" id="fantasy_name" tabindex="7" class="form-control" placeholder="Nome Fantasia" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="name" name="tel" id="tel" tabindex="8" class="form-control" placeholder="Telefone" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="name" name="cnpj" id="cnpj" tabindex="9" class="form-control" placeholder="CNPJ" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="name" name="cep" id="cep" tabindex="10" class="form-control" placeholder="CEP" value="">
+                            </div>
+                            <div class="form-group">
+                                <select tabindex="12" class="form-control states">
+                                    <option value="">Selecione seu Estado</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espirito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="name" name="city" id="city" tabindex="11" class="form-control" placeholder="Cidade" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="name" name="adress" id="adress" tabindex="13" class="form-control" placeholder="Endereço" value="">
+                            </div>									
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-6 col-sm-offset-3">
+                                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-submit" value="Atualizar"> 
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--------Scripts-------->
+<!--Jquery-->
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+
+<!--Bootstrap JS-->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<!--Main-->
+<script type="text/javascript" src="js/main.js"></script>
+	
+</body>
+    
+</html>
